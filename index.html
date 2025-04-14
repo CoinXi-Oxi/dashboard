@@ -1,0 +1,51 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>CoinXi Dashboard</title>
+  <script src="https://cdn.jsdelivr.net/npm/ethers/dist/ethers.min.js"></script>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background: #101820;
+      color: #fff;
+      margin: 0;
+      padding: 20px;
+      text-align: center;
+    }
+    h1 {
+      color: #00c6ff;
+    }
+    button {
+      padding: 10px 20px;
+      margin: 10px;
+      background: #00c6ff;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background: #0086cc;
+    }
+    #walletAddress {
+      margin-top: 20px;
+      font-weight: bold;
+      color: #1effbc;
+    }
+  </style>
+</head>
+<body>
+  <h1>CoinXi Admin Panel</h1>
+  <button id="connectWallet">Connect MetaMask</button>
+  <div id="walletAddress">Not Connected</div>
+  <br/><br/>
+  <button onclick="pauseContract()">Pause Contract</button>
+  <button onclick="unpauseContract()">Unpause Contract</button>
+  <button onclick="burnTokens()">Burn Tokens</button>
+  <button onclick="transferOwnership()">Transfer Ownership</button>
+  <script src="app.js"></script>
+</body>
+</html>
